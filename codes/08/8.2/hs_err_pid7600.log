@@ -1,0 +1,212 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000007feedce47e9, pid=7600, tid=8108
+#
+# JRE version:  (11.0.6+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.6+8-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x1e47e9]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Denv.class.path=.;D:\Tomcat9034\lib\servlet-api.jar;D:\kotlinc1.1.4-2\lib\kotlin-stdlib.jar;E:\Java\AOP\aspectj1.9\lib\aspectjrt.jar -Dapplication.home=D:\Java\jdk-11.0.6 --add-modules=ALL-DEFAULT -Xms8m -Djdk.module.main=jdk.compiler jdk.compiler/com.sun.tools.javac.Main -d . -encoding UTF-8 -deprecation -Xlint:unchecked -Xlint:fallthrough CollectionTest.java
+
+Host: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz, 4 cores, 7G,  Windows 7 , 64 bit Build 7601 (6.1.7601.18015)
+Time: Sun Nov 22 10:47:26 2020 ??2?¡À¨º¡Á?¨º¡À?? elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000000335800):  JavaThread "Unknown thread" [_thread_in_vm, id=8108, stack(0x00000000023f0000,0x00000000024f0000)]
+
+Stack: [0x00000000023f0000,0x00000000024f0000],  sp=0x00000000024eec10,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1e47e9]
+V  [jvm.dll+0x1e2d03]
+V  [jvm.dll+0x37332b]
+V  [jvm.dll+0x734e5e]
+V  [jvm.dll+0x3e2b5d]
+V  [jvm.dll+0x3e4ef1]
+C  [jli.dll+0x51bf]
+C  [jli.dll+0x16f34]
+C  [kernel32.dll+0x1652d]
+C  [ntdll.dll+0x2c541]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000c23c83d68a17, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x0000000000000000
+RSP=0x00000000024eec10, RBP=0x0000000000000000, RSI=0x0000000000335800, RDI=0x0000000000000000
+R8 =0x0000000000000006, R9 =0x00000000024ee618, R10=0x00000000003420a0, R11=0x00000000024ee692
+R12=0x00000000024ef6c8, R13=0x0000000000000000, R14=0x000007feee3db548, R15=0x000000000031cef8
+RIP=0x000007feedce47e9, EFLAGS=0x0000000000010256
+
+Top of Stack: (sp=0x00000000024eec10)
+0x00000000024eec10:   0000000000000000 00000000024eed30
+0x00000000024eec20:   0000000079f1b05e 000007feee3db548
+0x00000000024eec30:   000000000031cef8 000007feee3db548
+0x00000000024eec40:   0000000000000000 00000000024ef6c8
+0x00000000024eec50:   000007feee362b98 0000000000000000
+0x00000000024eec60:   000007feef9f0000 0000000076fc84c1
+0x00000000024eec70:   000007feef9d0000 000007feee33d98b
+0x00000000024eec80:   00000000024eee40 000007feee1303da
+0x00000000024eec90:   000007fe00000000 0000000000000000
+0x00000000024eeca0:   000007feee362b98 000007fefcf43150
+0x00000000024eecb0:   0000c23c83d68a17 000007feee3db548
+0x00000000024eecc0:   0000000000000000 0000000000000000
+0x00000000024eecd0:   0000000000335800 00000000024eedf0
+0x00000000024eece0:   00000000023f0000 000007feedce2d03
+0x00000000024eecf0:   000007feef9d0000 000007feef9fd090
+0x00000000024eed00:   0000000000335800 0000000000000000 
+
+Instructions: (pc=0x000007feedce47e9)
+0x000007feedce47c9:   b8 00 00 00 48 8b 05 bc 35 84 00 48 33 c4 48 89
+0x000007feedce47d9:   84 24 a0 00 00 00 48 8b e9 48 83 cb ff 48 ff c3
+0x000007feedce47e9:   80 3c 0b 00 75 f7 33 f6 c6 44 24 30 01 40 38 35
+0x000007feedce47f9:   0c 3b 87 00 74 17 40 38 35 ba a1 86 00 75 0e 33 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000000000318d30, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000007feee239bcd]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000007feee24f4e7]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f1a0000 - 0x000000013f1a8000 	D:\Java\jdk-11.0.6\bin\javac.exe
+0x0000000076f70000 - 0x0000000077119000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076e50000 - 0x0000000076f6f000 	C:\Windows\system32\kernel32.dll
+0x000007fefcf40000 - 0x000007fefcfab000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feefa20000 - 0x000007feefa5f000 	D:\Java\jdk-11.0.6\bin\jli.dll
+0x000007fefd370000 - 0x000007fefd44b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd2d0000 - 0x000007fefd36f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefd820000 - 0x000007fefd83f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefd9d0000 - 0x000007fefdafd000 	C:\Windows\system32\RPCRT4.dll
+0x000007fefbeb0000 - 0x000007fefc0a4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefdcd0000 - 0x000007fefdd37000 	C:\Windows\system32\GDI32.dll
+0x0000000076d50000 - 0x0000000076e4a000 	C:\Windows\system32\USER32.dll
+0x000007fefd1b0000 - 0x000007fefd1be000 	C:\Windows\system32\LPK.dll
+0x000007fefd0e0000 - 0x000007fefd1a9000 	C:\Windows\system32\USP10.dll
+0x000007fefd540000 - 0x000007fefd5b1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefbbd0000 - 0x000007fefbbdc000 	C:\Windows\system32\VERSION.dll
+0x000007fef6760000 - 0x000007fef6776000 	D:\Java\jdk-11.0.6\bin\VCRUNTIME140.dll
+0x000007fef63f0000 - 0x000007fef63f4000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-runtime-l1-1-0.dll
+0x000007feee6e0000 - 0x000007feee7d6000 	D:\Java\jdk-11.0.6\bin\ucrtbase.DLL
+0x000007fef6370000 - 0x000007fef6373000 	D:\Java\jdk-11.0.6\bin\api-ms-win-core-localization-l1-2-0.dll
+0x000007fef6360000 - 0x000007fef6363000 	D:\Java\jdk-11.0.6\bin\api-ms-win-core-processthreads-l1-1-1.dll
+0x000007fef6350000 - 0x000007fef6353000 	D:\Java\jdk-11.0.6\bin\api-ms-win-core-file-l1-2-0.dll
+0x000007fef4610000 - 0x000007fef4613000 	D:\Java\jdk-11.0.6\bin\api-ms-win-core-timezone-l1-1-0.dll
+0x000007fef4600000 - 0x000007fef4603000 	D:\Java\jdk-11.0.6\bin\api-ms-win-core-file-l2-1-0.dll
+0x000007fef37f0000 - 0x000007fef37f3000 	D:\Java\jdk-11.0.6\bin\api-ms-win-core-synch-l1-2-0.dll
+0x000007fef3700000 - 0x000007fef3704000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-string-l1-1-0.dll
+0x000007fef36f0000 - 0x000007fef36f3000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-heap-l1-1-0.dll
+0x000007fef3380000 - 0x000007fef3384000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-stdio-l1-1-0.dll
+0x000007fef3370000 - 0x000007fef3374000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-convert-l1-1-0.dll
+0x000007fef3360000 - 0x000007fef3363000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-environment-l1-1-0.dll
+0x000007fef32b0000 - 0x000007fef32b5000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-math-l1-1-0.dll
+0x000007fef32a0000 - 0x000007fef32a3000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-locale-l1-1-0.dll
+0x000007fefdb00000 - 0x000007fefdb2e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefd1c0000 - 0x000007fefd2c9000 	C:\Windows\system32\MSCTF.dll
+0x000007fefcc50000 - 0x000007fefcc90000 	C:\Windows\system32\nvinitx.dll
+0x000007feee630000 - 0x000007feee6da000 	D:\Java\jdk-11.0.6\bin\msvcp140.dll
+0x000007fef11e0000 - 0x000007fef11e5000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+0x000007fef11d0000 - 0x000007fef11d3000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-time-l1-1-0.dll
+0x000007fef11c0000 - 0x000007fef11c3000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+0x000007fef10b0000 - 0x000007fef10b3000 	D:\Java\jdk-11.0.6\bin\api-ms-win-crt-utility-l1-1-0.dll
+0x000007feedb00000 - 0x000007feee629000 	D:\Java\jdk-11.0.6\bin\server\jvm.dll
+0x000007fef6990000 - 0x000007fef6999000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefd450000 - 0x000007fefd49d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe000000 - 0x000007fefe008000 	C:\Windows\system32\NSI.dll
+0x000007fef9b60000 - 0x000007fef9b9b000 	C:\Windows\system32\WINMM.dll
+0x0000000077130000 - 0x0000000077137000 	C:\Windows\system32\PSAPI.DLL
+0x000007fef0f30000 - 0x000007fef0f41000 	D:\Java\jdk-11.0.6\bin\verify.dll
+0x000007fef9bf0000 - 0x000007fef9d15000 	C:\Windows\system32\DBGHELP.DLL
+0x000007feef9f0000 - 0x000007feefa19000 	D:\Java\jdk-11.0.6\bin\java.dll
+0x000007feef9d0000 - 0x000007feef9e6000 	D:\Java\jdk-11.0.6\bin\zip.dll
+0x000007fef10a0000 - 0x000007fef10aa000 	D:\Java\jdk-11.0.6\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\Java\jdk-11.0.6\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac;D:\Java\jdk-11.0.6\bin\server
+
+VM Arguments:
+jvm_args: -Denv.class.path=.;D:\Tomcat9034\lib\servlet-api.jar;D:\kotlinc1.1.4-2\lib\kotlin-stdlib.jar;E:\Java\AOP\aspectj1.9\lib\aspectjrt.jar -Dapplication.home=D:\Java\jdk-11.0.6 --add-modules=ALL-DEFAULT -Xms8m -Djdk.module.main=jdk.compiler 
+java_command: jdk.compiler/com.sun.tools.javac.Main -d . -encoding UTF-8 -deprecation -Xlint:unchecked -Xlint:fallthrough CollectionTest.java
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 8388608                                   {product} {command line}
+   size_t MaxHeapSize                              = 2063368192                                {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=D:\Java\jdk-11.0.6
+CLASSPATH=.;D:\Tomcat9034\lib\servlet-api.jar;D:\kotlinc1.1.4-2\lib\kotlin-stdlib.jar;E:\Java\AOP\aspectj1.9\lib\aspectjrt.jar
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;D:\gradle-6.5.1\bin;D:\Python\Python38\Scripts\;D:\Python\Python38\;D:\Java\jdk-11.0.6\bin;D:\Ant1107\bin;D:\Maven363\bin;D:\kotlinc1.1.4-2\bin;E:\Java\AOP\aspectj1.9\bin;C:\Users\yeeku\AppData\Roaming\npm;D:\mongodb-4.2.8\bin;D:\Redis-x64-5.0.9;D:\Geode1.12.0\bin;D:\Cassandra3.11.7\bin;D:\hbase-2.3.1\bin;D:\Couchbase\Server\bin
+USERNAME=yeeku
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.18015)
+
+CPU:total 4 (initial active 4) 
+
+Memory: 4k page, system-wide physical 7871M (3825M free)
+TotalPageFile size 15740M (AvailPageFile size 11295M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 4M, peak: 4M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.6+8-LTS) for windows-amd64 JRE (11.0.6+8-LTS), built on Dec 11 2019 09:17:57 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
